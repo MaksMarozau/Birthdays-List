@@ -29,6 +29,8 @@ final class MainListView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.register(MainLIstTableViewCell.self, forCellReuseIdentifier: "MainLIstTableViewCell")
+        
         view.addSubview(tableView)
         
         setConstraintes()
@@ -84,7 +86,7 @@ final class MainListView: UIViewController {
         view.backgroundColor = .backgroundMain
         
         tableView.backgroundColor = .clear
-        tableView.rowHeight = 160
+        tableView.rowHeight = 140
         tableView.separatorStyle = .none
     }
     
@@ -110,7 +112,12 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainLIstTableViewCell", for: indexPath) as? MainLIstTableViewCell else { return UITableViewCell() }
+        
+        cell.backgroundColor = .clear
+        cell.selectionStyle = .none
+        
+        return cell
     }
     
     
