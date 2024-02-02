@@ -97,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				2D0374352B6D004C003745D6 /* view */,
-				2D0374362B6D006D003745D6 /* presenter */,
 				2D0374372B6D0076003745D6 /* interractor */,
+				2D0374362B6D006D003745D6 /* presenter */,
 			);
 			path = MainListScreen;
 			sourceTree = "<group>";
