@@ -1,29 +1,75 @@
-//
-//  AddNewInfoView.swift
-//  Birthdays List
-//
-//  Created by Maks on 2.02.24.
-//
-
 import UIKit
 
-class AddNewInfoView: UIViewController {
+//MARK: - Protocol for extention AddNewInfoView with MVP-archetecture's methods
 
+protocol AddNewInfoViewInputProtocol: AnyObject {
+    
+}
+
+
+
+//MARK: - Final class AddNewInfoView
+
+final class AddNewInfoView: UIViewController {
+    
+    
+//MARK: - Properties of class
+    
+    
+    
+    
+    
+//MARK: - Lifecycle of controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setConstraintes()
+        configureUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureNavigationBar()
     }
-    */
+    
+    
+    
+//MARK: - Configurations of Navigation bar
+    
+    private func configureNavigationBar() {
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "New Info"
+    }
+    
+    
+    
+//MARK: - Setting of constraintes
+    
+    private func setConstraintes() {
+        
+        
+    }
+    
+    
+    
+//MARK: - Configuration of User Interface
+    
+    private func configureUI() {
+        
+        view.backgroundColor = .backgroundMain
+        
+    }
+}
+    
 
+
+//MARK: - Extention Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol
+
+extension AddNewInfoView: AddNewInfoViewInputProtocol {
+    
+    
 }
