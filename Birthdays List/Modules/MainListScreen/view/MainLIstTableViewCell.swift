@@ -4,6 +4,7 @@ import UIKit
 
 final class MainLIstTableViewCell: UITableViewCell {
 
+    
 //MARK: - Properties of class
     
     private let visualeffectView = UIView()
@@ -94,6 +95,7 @@ final class MainLIstTableViewCell: UITableViewCell {
         birthdayDateLabel.heightAnchor.constraint(equalTo: rightContainerView.heightAnchor, multiplier: 0.5).isActive = true
         birthdayDateLabel.widthAnchor.constraint(equalTo: rightContainerView.widthAnchor, multiplier: 0.9).isActive = true
     }
+    
     
     
 //MARK: - Configuration of User Interface
