@@ -18,6 +18,7 @@
 		2D0374422B6D012F003745D6 /* AddNewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374412B6D012F003745D6 /* AddNewInfoView.swift */; };
 		2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */; };
 		2D0374462B6D0150003745D6 /* AddNewInfoInterractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */; };
+		2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2D0374412B6D012F003745D6 /* AddNewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoView.swift; sourceTree = "<group>"; };
 		2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoPresenter.swift; sourceTree = "<group>"; };
 		2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoInterractor.swift; sourceTree = "<group>"; };
+		2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLIstTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +68,8 @@
 		2D0374182B6CFC9E003745D6 /* Birthdays List */ = {
 			isa = PBXGroup;
 			children = (
-				2D0374332B6CFFF2003745D6 /* Modules */,
 				2D0374302B6CFF89003745D6 /* Common */,
+				2D0374332B6CFFF2003745D6 /* Modules */,
 				2D0374312B6CFF96003745D6 /* Source */,
 				2D03742A2B6CFC9F003745D6 /* Info.plist */,
 				2D0374222B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld */,
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2D03743B2B6D00DC003745D6 /* MainListView.swift */,
+				2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */,
 				2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */,
 				2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */,
+				2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */,
 				2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */,
 				2D0374402B6D010D003745D6 /* MainListInterractor.swift in Sources */,
 				2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */,
