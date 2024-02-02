@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374192B6CFC9E003745D6 /* AppDelegate.swift */; };
 		2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */; };
-		2D03741E2B6CFC9E003745D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03741D2B6CFC9E003745D6 /* ViewController.swift */; };
 		2D0374242B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374222B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld */; };
 		2D0374262B6CFC9F003745D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0374252B6CFC9F003745D6 /* Assets.xcassets */; };
 		2D0374292B6CFC9F003745D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */; };
+		2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743B2B6D00DC003745D6 /* MainListView.swift */; };
+		2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743D2B6D0100003745D6 /* MainListPresenter.swift */; };
+		2D0374402B6D010D003745D6 /* MainListInterractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743F2B6D010D003745D6 /* MainListInterractor.swift */; };
+		2D0374422B6D012F003745D6 /* AddNewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374412B6D012F003745D6 /* AddNewInfoView.swift */; };
+		2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */; };
+		2D0374462B6D0150003745D6 /* AddNewInfoInterractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D0374162B6CFC9E003745D6 /* Birthdays List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birthdays List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0374192B6CFC9E003745D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D03741D2B6CFC9E003745D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D0374232B6CFC9E003745D6 /* Birthdays_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Birthdays_List.xcdatamodel; sourceTree = "<group>"; };
 		2D0374252B6CFC9F003745D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0374282B6CFC9F003745D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D03742A2B6CFC9F003745D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D03743B2B6D00DC003745D6 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		2D03743D2B6D0100003745D6 /* MainListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListPresenter.swift; sourceTree = "<group>"; };
+		2D03743F2B6D010D003745D6 /* MainListInterractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListInterractor.swift; sourceTree = "<group>"; };
+		2D0374412B6D012F003745D6 /* AddNewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoView.swift; sourceTree = "<group>"; };
+		2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoPresenter.swift; sourceTree = "<group>"; };
+		2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoInterractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,108 @@
 		2D0374182B6CFC9E003745D6 /* Birthdays List */ = {
 			isa = PBXGroup;
 			children = (
-				2D0374192B6CFC9E003745D6 /* AppDelegate.swift */,
-				2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */,
-				2D03741D2B6CFC9E003745D6 /* ViewController.swift */,
-				2D0374252B6CFC9F003745D6 /* Assets.xcassets */,
-				2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */,
+				2D0374332B6CFFF2003745D6 /* Modules */,
+				2D0374302B6CFF89003745D6 /* Common */,
+				2D0374312B6CFF96003745D6 /* Source */,
 				2D03742A2B6CFC9F003745D6 /* Info.plist */,
 				2D0374222B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld */,
 			);
 			path = "Birthdays List";
+			sourceTree = "<group>";
+		};
+		2D0374302B6CFF89003745D6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374192B6CFC9E003745D6 /* AppDelegate.swift */,
+				2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2D0374312B6CFF96003745D6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374252B6CFC9F003745D6 /* Assets.xcassets */,
+				2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2D0374322B6CFFAB003745D6 /* MainListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374352B6D004C003745D6 /* view */,
+				2D0374362B6D006D003745D6 /* presenter */,
+				2D0374372B6D0076003745D6 /* interractor */,
+			);
+			path = MainListScreen;
+			sourceTree = "<group>";
+		};
+		2D0374332B6CFFF2003745D6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374322B6CFFAB003745D6 /* MainListScreen */,
+				2D0374342B6CFFFE003745D6 /* AddNewInfoScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2D0374342B6CFFFE003745D6 /* AddNewInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2D03743A2B6D00A1003745D6 /* view */,
+				2D0374392B6D0099003745D6 /* presenter */,
+				2D0374382B6D008C003745D6 /* interactor */,
+			);
+			path = AddNewInfoScreen;
+			sourceTree = "<group>";
+		};
+		2D0374352B6D004C003745D6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2D03743B2B6D00DC003745D6 /* MainListView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2D0374362B6D006D003745D6 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D03743D2B6D0100003745D6 /* MainListPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		2D0374372B6D0076003745D6 /* interractor */ = {
+			isa = PBXGroup;
+			children = (
+				2D03743F2B6D010D003745D6 /* MainListInterractor.swift */,
+			);
+			path = interractor;
+			sourceTree = "<group>";
+		};
+		2D0374382B6D008C003745D6 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		2D0374392B6D0099003745D6 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		2D03743A2B6D00A1003745D6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374412B6D012F003745D6 /* AddNewInfoView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0374462B6D0150003745D6 /* AddNewInfoInterractor.swift in Sources */,
+				2D0374422B6D012F003745D6 /* AddNewInfoView.swift in Sources */,
 				2D0374242B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld in Sources */,
-				2D03741E2B6CFC9E003745D6 /* ViewController.swift in Sources */,
+				2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */,
+				2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */,
 				2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */,
+				2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */,
+				2D0374402B6D010D003745D6 /* MainListInterractor.swift in Sources */,
 				2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
