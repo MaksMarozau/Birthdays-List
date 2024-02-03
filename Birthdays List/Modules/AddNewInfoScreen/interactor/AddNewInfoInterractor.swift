@@ -11,7 +11,6 @@ final class AddNewInfoInterractor: AddNewInfoInterractorInputProtocol {
    
     private let presenter: AddNewInfoPresenterProtocol
     
-    
     init(presenter: AddNewInfoPresenterProtocol) {
         self.presenter = presenter
     }
@@ -31,6 +30,5 @@ final class AddNewInfoInterractor: AddNewInfoInterractorInputProtocol {
         } else {
             print("Data is empty")
         }
-        
     }
 }

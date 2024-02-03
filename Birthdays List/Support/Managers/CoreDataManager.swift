@@ -48,7 +48,23 @@ final class CoreDataManager: NSCopying {
     
 //MARK: - Load data method
     
-    func loadData() {
+    func loadData() -> Result<[Birthday], CoreDataErrors> {
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .failure(.error("AppDelegate not found")) }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let feetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Birthday")
+        
+        var birthdays: [Birthday] = []
+        
+        do {
+            let objects = try managedContext.fetch(feetchRequest)
+            guard let feetchedObjects = objects as? [Birthday] else {return .failure(.error("Could not cast to [Birthday]"))}
+            birthdays = feetchedObjects
+        } catch {
+            return .failure(.error("Could not load"))
+        }
+        return .success(birthdays)
     }
 }
