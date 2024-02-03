@@ -55,8 +55,10 @@ final class MainListView: UIViewController {
         title = "Birthdays List"
         
         navigationController?.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { _ in
-        
+            let controller = AddNewInfoView()
+            self.navigationController?.pushViewController(controller, animated: true)
         }))
+        navigationController?.topViewController?.navigationItem.rightBarButtonItem?.tintColor = UIColor.visualEffect
         
         navigationController?.topViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .trash, primaryAction: UIAction(handler: { _ in
             
