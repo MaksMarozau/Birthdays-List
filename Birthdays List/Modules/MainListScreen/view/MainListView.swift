@@ -4,6 +4,7 @@ import UIKit
 
 protocol MainListViewInputProtocol: AnyObject {
     
+    func updateData(with data: [Birthday])
 }
 
 
@@ -15,10 +16,12 @@ final class MainListView: UIViewController {
     
 //MARK: - Properties of class
     
+    var interactor: MainListInteractorInputProtocol!
+    var router: MainListRouterInputProtocol!
+    
     private let tableView = UITableView()
     
-    var interactor: MainListInteractorProtocol!
-    var router: MainListRouterInputProtocol!
+    private var birthdays: [Birthday] = []
     
     
     
@@ -43,7 +46,7 @@ final class MainListView: UIViewController {
         super.viewWillAppear(animated)
         
         configureNavigationBar()
-        //                viewWillStart()
+        viewWillStart()
     }
     
     
@@ -97,7 +100,7 @@ final class MainListView: UIViewController {
 //MARK: - Works out before view will start
     
     private func viewWillStart() {
-        //                presenter.loadData()
+        interactor.loadData()
     }
 }
 
@@ -108,17 +111,24 @@ final class MainListView: UIViewController {
 extension MainListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return birthdays.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let birthday = birthdays[indexPath.row]
+        
+        let name = birthday.name ?? ""
+        let surname = birthday.surname ?? ""
+        let date = birthday.date ?? .now
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainLIstTableViewCell", for: indexPath) as? MainLIstTableViewCell else { return UITableViewCell() }
         
         cell.backgroundColor = .clear
         cell.selectionStyle = .default
         
+        cell.setData(name: name, surname: surname, date: date)
         return cell
     }
     
@@ -126,16 +136,16 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
-    
 }
+
 
 
 //MARK: - Extention Extention for MainListView with protocol MainListViewInputProtocol
 
 extension MainListView: MainListViewInputProtocol {
     
-    
+    func updateData(with data: [Birthday]) {
+        birthdays = data
+        tableView.reloadData()
+    }
 }

@@ -121,16 +121,29 @@ final class MainLIstTableViewCell: UITableViewCell {
         nameLabel.textAlignment = .center
         nameLabel.font = UIFont(name: "MuktaMahee Bold", size: 23)
         nameLabel.textColor = .fontMain
-        nameLabel.text = "Maks"
         
         surnameLabel.textAlignment = .center
         surnameLabel.font = UIFont(name: "MuktaMahee Bold", size: 23)
         surnameLabel.textColor = .fontMain
-        surnameLabel.text = "Marozau"
         
         birthdayDateLabel.textAlignment = .center
         birthdayDateLabel.font = UIFont(name: "MuktaMahee Regular", size: 26)
         birthdayDateLabel.textColor = .fontMain
-        birthdayDateLabel.text = "21 marth 2022"
+    }
+    
+    
+    
+//MARK: - getting and setting of data to fill in (public)
+    
+    func setData(name: String, surname: String, date: Date) {
+        
+        nameLabel.text = name
+        
+        surnameLabel.text = surname
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d MMMM yyyy"
+        let dateStr = formatter.string(from: date)
+        birthdayDateLabel.text = dateStr
     }
 }

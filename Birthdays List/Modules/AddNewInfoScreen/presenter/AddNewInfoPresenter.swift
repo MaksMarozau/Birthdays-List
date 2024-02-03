@@ -17,7 +17,7 @@ final class AddNewInfoPresenter {
     
 //MARK: - Properties of class
 
-    private let view: AddNewInfoViewInputProtocol
+    unowned let view: AddNewInfoViewInputProtocol
     
     
 //MARK: - Initialization
