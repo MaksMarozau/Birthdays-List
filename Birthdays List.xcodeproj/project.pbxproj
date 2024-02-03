@@ -21,6 +21,8 @@
 		2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */; };
 		2D03744B2B6D3E6B003745D6 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03744A2B6D3E6B003745D6 /* Extension + UIView.swift */; };
 		2D03744D2B6D483D003745D6 /* Extension + UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */; };
+		2D0374512B6E3F7B003745D6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */; };
+		2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374522B6E4344003745D6 /* ErrorsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLIstTableViewCell.swift; sourceTree = "<group>"; };
 		2D03744A2B6D3E6B003745D6 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIStackView.swift"; sourceTree = "<group>"; };
+		2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2D0374522B6E4344003745D6 /* ErrorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		2D0374182B6CFC9E003745D6 /* Birthdays List */ = {
 			isa = PBXGroup;
 			children = (
+				2D03744E2B6E3F4B003745D6 /* Support */,
 				2D0374492B6D3E38003745D6 /* Extensions */,
 				2D0374302B6CFF89003745D6 /* Common */,
 				2D0374332B6CFFF2003745D6 /* Modules */,
@@ -123,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				2D03743A2B6D00A1003745D6 /* view */,
-				2D0374392B6D0099003745D6 /* presenter */,
 				2D0374382B6D008C003745D6 /* interactor */,
+				2D0374392B6D0099003745D6 /* presenter */,
 			);
 			path = AddNewInfoScreen;
 			sourceTree = "<group>";
@@ -185,6 +190,23 @@
 				2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D03744E2B6E3F4B003745D6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2D03744F2B6E3F59003745D6 /* Managers */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		2D03744F2B6E3F59003745D6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */,
+				2D0374522B6E4344003745D6 /* ErrorsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +286,10 @@
 				2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */,
 				2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */,
 				2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */,
+				2D0374512B6E3F7B003745D6 /* CoreDataManager.swift in Sources */,
 				2D03744D2B6D483D003745D6 /* Extension + UIStackView.swift in Sources */,
 				2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */,
+				2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */,
 				2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */,
 				2D0374402B6D010D003745D6 /* MainListInterractor.swift in Sources */,
 				2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */,

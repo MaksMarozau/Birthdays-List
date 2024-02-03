@@ -15,6 +15,8 @@ final class AddNewInfoView: UIViewController {
     
 //MARK: - Properties of class
     
+    var interactor: AddNewInfoInterractor!
+    
     private let containerView = UIView()
     private let saveButton = UIButton()
     
@@ -25,6 +27,7 @@ final class AddNewInfoView: UIViewController {
     private let nameTextField = UITextField()
     private let surnameTextField = UITextField()
     
+    private var date = Date()
     
     
 //MARK: - Lifecycle of controller
@@ -113,6 +116,7 @@ final class AddNewInfoView: UIViewController {
         saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         saveButton.layer.borderWidth = 1
         saveButton.layer.borderColor = UIColor.visualEffect.cgColor
+        saveButton.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
         
         verticalStackView.axis = .vertical
         verticalStackView.distribution = .fillEqually
@@ -143,6 +147,7 @@ final class AddNewInfoView: UIViewController {
         birthdayDataPicker.preferredDatePickerStyle = .wheels
         birthdayDataPicker.date = .now
         birthdayDataPicker.maximumDate = .now
+        birthdayDataPicker.addTarget(self, action: #selector(dateChoose), for: .valueChanged)
     }
     
     
@@ -157,8 +162,24 @@ final class AddNewInfoView: UIViewController {
         saveButton.layer.cornerRadius = nameTextField.frame.height / 2
         saveButton.clipsToBounds = true
     }
+    
+    
+    
+//MARK: - Actions
+    
+    @objc private func dateChoose(_ sender: UIDatePicker) {
+        self.date = sender.date
+    }
+    
+    @objc private func saveTapped() {
+        let name = nameTextField.text
+        let surname = surnameTextField.text
+        let birthdayDate = date
+        interactor.getData(name: name, surname: surname, date: birthdayDate)
+    }
 }
  
+
 
 
 //MARK: - Extention Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol
