@@ -17,7 +17,8 @@ final class MainListView: UIViewController {
     
     private let tableView = UITableView()
     
-    
+    var interactor: MainListInteractorProtocol!
+    var router: MainListRouterInputProtocol!
     
     
     
@@ -55,8 +56,7 @@ final class MainListView: UIViewController {
         title = "Birthdays List"
         
         navigationController?.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { _ in
-            let controller = AddNewInfoView()
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.router.moveToAddingInfo()
         }))
         navigationController?.topViewController?.navigationItem.rightBarButtonItem?.tintColor = UIColor.visualEffect
         

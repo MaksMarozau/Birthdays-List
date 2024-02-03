@@ -15,7 +15,8 @@ final class AddNewInfoView: UIViewController {
     
 //MARK: - Properties of class
     
-    var interactor: AddNewInfoInterractor!
+    var interactor: AddNewInfoInterractorInputProtocol!
+    var router: AddNewInfoRouterInputProtocol!
     
     private let containerView = UIView()
     private let saveButton = UIButton()

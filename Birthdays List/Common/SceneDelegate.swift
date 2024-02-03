@@ -19,13 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
+        let initialNavigationController = UINavigationController()
         
-        let controller = MainListView()
-        let navigationController = UINavigationController(rootViewController: controller)
-        window.rootViewController = navigationController
+        window.rootViewController = initialNavigationController
         window.makeKeyAndVisible()
         
         self.window = window
+        
+        let _ = MainListRouter(navigationController: initialNavigationController, window: window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
