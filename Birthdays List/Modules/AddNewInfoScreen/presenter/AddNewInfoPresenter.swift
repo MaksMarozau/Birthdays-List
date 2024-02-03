@@ -1,5 +1,7 @@
 import UIKit.UIAlertController
 
+//MARK: - Protocol for extention AddNewInfoPresenter to react to the eventes
+
 protocol AddNewInfoPresenterProtocol {
     
     func clearFields()
@@ -8,17 +10,25 @@ protocol AddNewInfoPresenterProtocol {
 }
 
 
+//MARK: - Final class AddNewInfoPresenter
 
 final class AddNewInfoPresenter {
 
+    
+//MARK: - Properties of class
+
     private let view: AddNewInfoViewInputProtocol
     
+    
+//MARK: - Initialization
+
     init(view: AddNewInfoViewInputProtocol) {
         self.view = view
     }
 }
 
 
+//MARK: - Implemendation of AddNewInfoPresenterProtocol protocol for AddNewInfoPresenter class
 
 extension AddNewInfoPresenter: AddNewInfoPresenterProtocol {
 

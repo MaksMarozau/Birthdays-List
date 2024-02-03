@@ -1,19 +1,31 @@
 import Foundation
 
+//MARK: - Protocol for extention AddNewInfoInterractor to event processing
+
 protocol AddNewInfoInterractorInputProtocol {
     
     func saveButtonTapped(name: String?, surname: String?, date: Date)
 }
 
 
+//MARK: - Final class AddNewInfoInterractor
 
 final class AddNewInfoInterractor {
     
+    
+//MARK: - Properties of class
+
     private let presenter: AddNewInfoPresenterProtocol
+    
+    
+//MARK: - Initialization
     
     init(presenter: AddNewInfoPresenterProtocol) {
         self.presenter = presenter
     }
+    
+    
+//MARK: - Methods of class
     
     func saveData(name: String, surname: String, date: Date) {
         
@@ -29,8 +41,7 @@ final class AddNewInfoInterractor {
 }
     
 
-
-//MARK: - Extension
+//MARK: - Implemendation of AddNewInfoInterractorInputProtocol protocol for AddNewInfoInterractor class
     
 extension AddNewInfoInterractor: AddNewInfoInterractorInputProtocol {
     

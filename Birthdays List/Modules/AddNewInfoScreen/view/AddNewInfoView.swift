@@ -1,6 +1,6 @@
 import UIKit
 
-//MARK: - Protocol for extention AddNewInfoView with MVP-archetecture's methods
+//MARK: - Protocol for extention AddNewInfoView with VIP-Clean-archetecture's methods
 
 protocol AddNewInfoViewInputProtocol: AnyObject {
     
@@ -33,26 +33,22 @@ final class AddNewInfoView: UIViewController {
     private var date = Date()
     
     
+    
 //MARK: - Lifecycle of controller
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubviews(with: containerView, saveButton)
-        containerView.addSubviews(with: verticalStackView, birthdayDataPicker)
-        verticalStackView.addArrangedSubviews(with: titleLabel, nameTextField, surnameTextField)
-        
+        addSubviews()
         setConstraintes()
         configureUI()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         configureNavigationBar()
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -69,6 +65,17 @@ final class AddNewInfoView: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "New Info"
         navigationController?.topViewController?.navigationItem.leftBarButtonItem?.tintColor = .visualEffect
+    }
+    
+    
+    
+//MARK: - Adding of subviews
+    
+    private func addSubviews() {
+        
+        view.addSubviews(with: containerView, saveButton)
+        containerView.addSubviews(with: verticalStackView, birthdayDataPicker)
+        verticalStackView.addArrangedSubviews(with: titleLabel, nameTextField, surnameTextField)
     }
     
     
@@ -181,11 +188,10 @@ final class AddNewInfoView: UIViewController {
         interactor.saveButtonTapped(name: name, surname: surname, date: birthdayDate)
     }
 }
- 
 
 
 
-//MARK: - Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol
+//MARK: - Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol to event processing
 
 extension AddNewInfoView: AddNewInfoViewInputProtocol {
   
