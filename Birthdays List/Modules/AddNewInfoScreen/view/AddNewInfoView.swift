@@ -4,6 +4,8 @@ import UIKit
 
 protocol AddNewInfoViewInputProtocol: AnyObject {
     
+    func reloadFieldsData(with name: String, _ surname: String)
+    func errorsNotification(with controller: UIViewController)
 }
 
 
@@ -176,16 +178,32 @@ final class AddNewInfoView: UIViewController {
         let name = nameTextField.text
         let surname = surnameTextField.text
         let birthdayDate = date
-        interactor.getData(name: name, surname: surname, date: birthdayDate)
+        interactor.saveButtonTapped(name: name, surname: surname, date: birthdayDate)
     }
 }
  
 
 
 
-//MARK: - Extention Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol
+//MARK: - Extention for AddNewInfoView with protocol AddNewInfoViewInputProtocol
 
 extension AddNewInfoView: AddNewInfoViewInputProtocol {
+  
+ func reloadFieldsData(with name: String, _ surname: String) {
+        nameTextField.text = name
+        surnameTextField.text = surname
+        
+        UIView.animate(withDuration: 0.3) {
+            let alert = UIAlertController(title: "Saved", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                alert.dismiss(animated: false)
+            }
+        }
+    }
     
     
+    func errorsNotification(with controller: UIViewController) {
+        present(controller, animated: true)
+    }
 }
