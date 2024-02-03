@@ -112,10 +112,10 @@
 		2D0374322B6CFFAB003745D6 /* MainListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				2D0374542B6E5F36003745D6 /* router */,
 				2D0374352B6D004C003745D6 /* view */,
 				2D0374372B6D0076003745D6 /* interactor */,
 				2D0374362B6D006D003745D6 /* presenter */,
-				2D0374542B6E5F36003745D6 /* router */,
 			);
 			path = MainListScreen;
 			sourceTree = "<group>";
@@ -132,10 +132,10 @@
 		2D0374342B6CFFFE003745D6 /* AddNewInfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				2D0374572B6E6557003745D6 /* router */,
 				2D03743A2B6D00A1003745D6 /* view */,
 				2D0374382B6D008C003745D6 /* interactor */,
 				2D0374392B6D0099003745D6 /* presenter */,
-				2D0374572B6E6557003745D6 /* router */,
 			);
 			path = AddNewInfoScreen;
 			sourceTree = "<group>";
