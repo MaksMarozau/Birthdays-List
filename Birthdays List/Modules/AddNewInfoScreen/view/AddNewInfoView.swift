@@ -63,7 +63,7 @@ final class AddNewInfoView: UIViewController {
     private func configureNavigationBar() {
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "New Info"
+        title = locText(by: "New title")
         navigationController?.topViewController?.navigationItem.leftBarButtonItem?.tintColor = .visualEffect
     }
     
@@ -121,7 +121,7 @@ final class AddNewInfoView: UIViewController {
         view.backgroundColor = .backgroundMain
         
         saveButton.backgroundColor = .backgroundField
-        saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitle(locText(by: "Save"), for: .normal)
         saveButton.setTitleColor(.fontMain, for: .normal)
         saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         saveButton.layer.borderWidth = 1
@@ -135,7 +135,7 @@ final class AddNewInfoView: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.textColor = .fontMain
         titleLabel.font = UIFont(name: "MuktaMahee Bold", size: 23)
-        titleLabel.text = "Enter some information below:"
+        titleLabel.text = locText(by: "Enter info")
         
         nameTextField.backgroundColor = .backgroundField
         nameTextField.borderStyle = .bezel
@@ -143,7 +143,7 @@ final class AddNewInfoView: UIViewController {
         nameTextField.layer.borderColor = UIColor.visualEffect.cgColor
         nameTextField.textAlignment = .center
         nameTextField.textColor = .fontMain
-        nameTextField.placeholder = "Name"
+        nameTextField.placeholder = locText(by: "Name")
         
         surnameTextField.backgroundColor = .backgroundField
         surnameTextField.borderStyle = .bezel
@@ -151,7 +151,7 @@ final class AddNewInfoView: UIViewController {
         surnameTextField.layer.borderColor = UIColor.visualEffect.cgColor
         surnameTextField.textAlignment = .center
         surnameTextField.textColor = .fontMain
-        surnameTextField.placeholder = "Surname"
+        surnameTextField.placeholder = locText(by: "Surname")
         
         birthdayDataPicker.datePickerMode = .date
         birthdayDataPicker.preferredDatePickerStyle = .wheels
@@ -187,6 +187,15 @@ final class AddNewInfoView: UIViewController {
         let birthdayDate = date
         interactor.saveButtonTapped(name: name, surname: surname, date: birthdayDate)
     }
+    
+    
+    
+//MARK: - Localization for text by title
+        
+    private func locText(by key: String) -> String {
+        let text = NSLocalizedString(key, comment: "")
+        return text
+    }
 }
 
 
@@ -200,7 +209,7 @@ extension AddNewInfoView: AddNewInfoViewInputProtocol {
         surnameTextField.text = surname
         
         UIView.animate(withDuration: 0.3) {
-            let alert = UIAlertController(title: "Saved", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: self.locText(by: "Saved"), message: nil, preferredStyle: .alert)
             self.present(alert, animated: false)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 alert.dismiss(animated: false)
