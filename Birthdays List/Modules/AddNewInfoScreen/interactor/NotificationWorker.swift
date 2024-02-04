@@ -25,8 +25,8 @@ final class NotificationWorker {
     func createContent() -> UNMutableNotificationContent {
         
         let content = UNMutableNotificationContent()
-        content.title = "Whaaat's UP!!!"
-        content.body = "Don't forget to congratulat your friend!"
+        content.title = locText(by: "Greeting")
+        content.body = locText(by: "Greeting body")
         content.sound = UNNotificationSound.default
         
         return content
@@ -41,6 +41,14 @@ final class NotificationWorker {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         return trigger
+    }
+    
+    
+//MARK: - Localization for text by title
+                
+    private func locText(by key: String) -> String {
+        let text = NSLocalizedString(key, comment: "")
+        return text
     }
 }
 

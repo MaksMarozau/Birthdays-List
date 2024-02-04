@@ -25,6 +25,14 @@ final class AddNewInfoPresenter {
     init(view: AddNewInfoViewInputProtocol) {
         self.view = view
     }
+    
+    
+//MARK: - Localization for text by title
+            
+    private func locText(by key: String) -> String {
+        let text = NSLocalizedString(key, comment: "")
+        return text
+    }
 }
 
 
@@ -39,14 +47,14 @@ extension AddNewInfoPresenter: AddNewInfoPresenterProtocol {
     }
     
     func emptyFieldError() {
-        let alert = UIAlertController(title: "Field is empty", message: "Every field must be fill in", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        let alert = UIAlertController(title: locText(by: "Empty"), message: locText(by: "Empty message"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: locText(by: "OK"), style: .cancel))
         view.errorsNotification(with: alert)
     }
     
     func failedSaveError(with error: String) {
-        let alert = UIAlertController(title: "Save was failed", message: error, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        let alert = UIAlertController(title: locText(by: "Save failed"), message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: locText(by: "Cancel"), style: .cancel))
         view.errorsNotification(with: alert)
     }
 }
