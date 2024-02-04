@@ -18,7 +18,8 @@ final class AddNewInfoRouter: AddNewInfoRouterInputProtocol {
         
         let view = AddNewInfoView()
         let presenter = AddNewInfoPresenter(view: view)
-        let interactor = AddNewInfoInterractor(presenter: presenter)
+        let notificationWorker = NotificationWorker()
+        let interactor = AddNewInfoInterractor(presenter: presenter, notificationWorker: notificationWorker)
         let router = self
         
         view.interactor = interactor

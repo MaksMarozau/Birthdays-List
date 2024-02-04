@@ -25,6 +25,7 @@
 		2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374522B6E4344003745D6 /* ErrorsManager.swift */; };
 		2D0374562B6E5F4A003745D6 /* MainListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374552B6E5F4A003745D6 /* MainListRouter.swift */; };
 		2D0374592B6E656F003745D6 /* AddNewInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374582B6E656F003745D6 /* AddNewInfoRouter.swift */; };
+		2D03745B2B6FD43F003745D6 /* NotificationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2D0374522B6E4344003745D6 /* ErrorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsManager.swift; sourceTree = "<group>"; };
 		2D0374552B6E5F4A003745D6 /* MainListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListRouter.swift; sourceTree = "<group>"; };
 		2D0374582B6E656F003745D6 /* AddNewInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoRouter.swift; sourceTree = "<group>"; };
+		2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */,
+				2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				2D0374512B6E3F7B003745D6 /* CoreDataManager.swift in Sources */,
 				2D03744D2B6D483D003745D6 /* Extension + UIStackView.swift in Sources */,
 				2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */,
+				2D03745B2B6FD43F003745D6 /* NotificationWorker.swift in Sources */,
 				2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */,
 				2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */,
 				2D0374402B6D010D003745D6 /* MainListInteractor.swift in Sources */,
