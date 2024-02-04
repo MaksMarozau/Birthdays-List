@@ -9,47 +9,21 @@
 /* Begin PBXBuildFile section */
 		2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374192B6CFC9E003745D6 /* AppDelegate.swift */; };
 		2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */; };
+		2D03741E2B6CFC9E003745D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03741D2B6CFC9E003745D6 /* ViewController.swift */; };
 		2D0374242B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374222B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld */; };
 		2D0374262B6CFC9F003745D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0374252B6CFC9F003745D6 /* Assets.xcassets */; };
 		2D0374292B6CFC9F003745D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */; };
-		2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743B2B6D00DC003745D6 /* MainListView.swift */; };
-		2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743D2B6D0100003745D6 /* MainListPresenter.swift */; };
-		2D0374402B6D010D003745D6 /* MainListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03743F2B6D010D003745D6 /* MainListInteractor.swift */; };
-		2D0374422B6D012F003745D6 /* AddNewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374412B6D012F003745D6 /* AddNewInfoView.swift */; };
-		2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */; };
-		2D0374462B6D0150003745D6 /* AddNewInfoInterractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */; };
-		2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */; };
-		2D03744B2B6D3E6B003745D6 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03744A2B6D3E6B003745D6 /* Extension + UIView.swift */; };
-		2D03744D2B6D483D003745D6 /* Extension + UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */; };
-		2D0374512B6E3F7B003745D6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */; };
-		2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374522B6E4344003745D6 /* ErrorsManager.swift */; };
-		2D0374562B6E5F4A003745D6 /* MainListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374552B6E5F4A003745D6 /* MainListRouter.swift */; };
-		2D0374592B6E656F003745D6 /* AddNewInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0374582B6E656F003745D6 /* AddNewInfoRouter.swift */; };
-		2D03745B2B6FD43F003745D6 /* NotificationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D0374162B6CFC9E003745D6 /* Birthdays List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birthdays List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D0374192B6CFC9E003745D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2D03741D2B6CFC9E003745D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D0374232B6CFC9E003745D6 /* Birthdays_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Birthdays_List.xcdatamodel; sourceTree = "<group>"; };
 		2D0374252B6CFC9F003745D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0374282B6CFC9F003745D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D03742A2B6CFC9F003745D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D03743B2B6D00DC003745D6 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
-		2D03743D2B6D0100003745D6 /* MainListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListPresenter.swift; sourceTree = "<group>"; };
-		2D03743F2B6D010D003745D6 /* MainListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListInteractor.swift; sourceTree = "<group>"; };
-		2D0374412B6D012F003745D6 /* AddNewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoView.swift; sourceTree = "<group>"; };
-		2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoPresenter.swift; sourceTree = "<group>"; };
-		2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoInterractor.swift; sourceTree = "<group>"; };
-		2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLIstTableViewCell.swift; sourceTree = "<group>"; };
-		2D03744A2B6D3E6B003745D6 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
-		2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIStackView.swift"; sourceTree = "<group>"; };
-		2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		2D0374522B6E4344003745D6 /* ErrorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsManager.swift; sourceTree = "<group>"; };
-		2D0374552B6E5F4A003745D6 /* MainListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListRouter.swift; sourceTree = "<group>"; };
-		2D0374582B6E656F003745D6 /* AddNewInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInfoRouter.swift; sourceTree = "<group>"; };
-		2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,156 +56,15 @@
 		2D0374182B6CFC9E003745D6 /* Birthdays List */ = {
 			isa = PBXGroup;
 			children = (
-				2D03744E2B6E3F4B003745D6 /* Support */,
-				2D0374492B6D3E38003745D6 /* Extensions */,
-				2D0374302B6CFF89003745D6 /* Common */,
-				2D0374332B6CFFF2003745D6 /* Modules */,
-				2D0374312B6CFF96003745D6 /* Source */,
+				2D0374192B6CFC9E003745D6 /* AppDelegate.swift */,
+				2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */,
+				2D03741D2B6CFC9E003745D6 /* ViewController.swift */,
+				2D0374252B6CFC9F003745D6 /* Assets.xcassets */,
+				2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */,
 				2D03742A2B6CFC9F003745D6 /* Info.plist */,
 				2D0374222B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld */,
 			);
 			path = "Birthdays List";
-			sourceTree = "<group>";
-		};
-		2D0374302B6CFF89003745D6 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374192B6CFC9E003745D6 /* AppDelegate.swift */,
-				2D03741B2B6CFC9E003745D6 /* SceneDelegate.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		2D0374312B6CFF96003745D6 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374252B6CFC9F003745D6 /* Assets.xcassets */,
-				2D0374272B6CFC9F003745D6 /* LaunchScreen.storyboard */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		2D0374322B6CFFAB003745D6 /* MainListScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374542B6E5F36003745D6 /* router */,
-				2D0374352B6D004C003745D6 /* view */,
-				2D0374372B6D0076003745D6 /* interactor */,
-				2D0374362B6D006D003745D6 /* presenter */,
-			);
-			path = MainListScreen;
-			sourceTree = "<group>";
-		};
-		2D0374332B6CFFF2003745D6 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374322B6CFFAB003745D6 /* MainListScreen */,
-				2D0374342B6CFFFE003745D6 /* AddNewInfoScreen */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		2D0374342B6CFFFE003745D6 /* AddNewInfoScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374572B6E6557003745D6 /* router */,
-				2D03743A2B6D00A1003745D6 /* view */,
-				2D0374382B6D008C003745D6 /* interactor */,
-				2D0374392B6D0099003745D6 /* presenter */,
-			);
-			path = AddNewInfoScreen;
-			sourceTree = "<group>";
-		};
-		2D0374352B6D004C003745D6 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				2D03743B2B6D00DC003745D6 /* MainListView.swift */,
-				2D0374472B6D3BCB003745D6 /* MainLIstTableViewCell.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		2D0374362B6D006D003745D6 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				2D03743D2B6D0100003745D6 /* MainListPresenter.swift */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		2D0374372B6D0076003745D6 /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-				2D03743F2B6D010D003745D6 /* MainListInteractor.swift */,
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
-		2D0374382B6D008C003745D6 /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374452B6D0150003745D6 /* AddNewInfoInterractor.swift */,
-				2D03745A2B6FD43F003745D6 /* NotificationWorker.swift */,
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
-		2D0374392B6D0099003745D6 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374432B6D013D003745D6 /* AddNewInfoPresenter.swift */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		2D03743A2B6D00A1003745D6 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374412B6D012F003745D6 /* AddNewInfoView.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		2D0374492B6D3E38003745D6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2D03744A2B6D3E6B003745D6 /* Extension + UIView.swift */,
-				2D03744C2B6D483D003745D6 /* Extension + UIStackView.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2D03744E2B6E3F4B003745D6 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				2D03744F2B6E3F59003745D6 /* Managers */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		2D03744F2B6E3F59003745D6 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374502B6E3F7B003745D6 /* CoreDataManager.swift */,
-				2D0374522B6E4344003745D6 /* ErrorsManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		2D0374542B6E5F36003745D6 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374552B6E5F4A003745D6 /* MainListRouter.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		2D0374572B6E6557003745D6 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				2D0374582B6E656F003745D6 /* AddNewInfoRouter.swift */,
-			);
-			path = router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,22 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D0374562B6E5F4A003745D6 /* MainListRouter.swift in Sources */,
-				2D0374592B6E656F003745D6 /* AddNewInfoRouter.swift in Sources */,
-				2D03744B2B6D3E6B003745D6 /* Extension + UIView.swift in Sources */,
-				2D0374462B6D0150003745D6 /* AddNewInfoInterractor.swift in Sources */,
-				2D0374422B6D012F003745D6 /* AddNewInfoView.swift in Sources */,
 				2D0374242B6CFC9E003745D6 /* Birthdays_List.xcdatamodeld in Sources */,
-				2D03743C2B6D00DC003745D6 /* MainListView.swift in Sources */,
-				2D0374442B6D013D003745D6 /* AddNewInfoPresenter.swift in Sources */,
+				2D03741E2B6CFC9E003745D6 /* ViewController.swift in Sources */,
 				2D03741A2B6CFC9E003745D6 /* AppDelegate.swift in Sources */,
-				2D0374512B6E3F7B003745D6 /* CoreDataManager.swift in Sources */,
-				2D03744D2B6D483D003745D6 /* Extension + UIStackView.swift in Sources */,
-				2D0374482B6D3BCB003745D6 /* MainLIstTableViewCell.swift in Sources */,
-				2D03745B2B6FD43F003745D6 /* NotificationWorker.swift in Sources */,
-				2D0374532B6E4344003745D6 /* ErrorsManager.swift in Sources */,
-				2D03743E2B6D0100003745D6 /* MainListPresenter.swift in Sources */,
-				2D0374402B6D010D003745D6 /* MainListInteractor.swift in Sources */,
 				2D03741C2B6CFC9E003745D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
