@@ -16,12 +16,14 @@ final class AddNewInfoInterractor {
 //MARK: - Properties of class
 
     private let presenter: AddNewInfoPresenterProtocol
+    private let notificationWorker: NotificationWorkerInputProtocol
     
     
 //MARK: - Initialization
     
-    init(presenter: AddNewInfoPresenterProtocol) {
+    init(presenter: AddNewInfoPresenterProtocol, notificationWorker: NotificationWorkerInputProtocol) {
         self.presenter = presenter
+        self.notificationWorker = notificationWorker
     }
     
     
@@ -37,6 +39,8 @@ final class AddNewInfoInterractor {
             print(failure)
             presenter.failedSaveError(with: "\(failure)")
         }
+        
+        notificationWorker.addNotification(by: date)
     }
 }
     

@@ -26,27 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 guard settings.authorizationStatus == .authorized else { return }
             }
         }
+        
         notificationCenter.delegate = self
-        sendNotifications()
         return true
     }
     
     
-    func sendNotifications() {
-        
-        let content = UNMutableNotificationContent()
-        content.title = "First notification"
-        content.body = "My notification"
-        content.sound = UNNotificationSound.default
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
-        
-        notificationCenter.add(request) { error in
-            print(error?.localizedDescription)
-        }
-    }
+    
 
     
     // MARK: UISceneSession Lifecycle
@@ -113,8 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
         
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        return [.alert, .sound]
         print(#function)
+        return [.alert, .sound]
     }
     
     
