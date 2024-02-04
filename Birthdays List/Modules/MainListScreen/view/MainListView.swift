@@ -5,6 +5,7 @@ import UIKit
 protocol MainListViewInputProtocol: AnyObject {
     
     func updateData(with data: [Birthday])
+    func updateData()
 }
 
 
@@ -64,7 +65,7 @@ final class MainListView: UIViewController {
         navigationController?.topViewController?.navigationItem.rightBarButtonItem?.tintColor = UIColor.visualEffect
         
         navigationController?.topViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .trash, primaryAction: UIAction(handler: { _ in
-            
+            self.tableView.isEditing.toggle()
         }))
         navigationController?.topViewController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.red
     }
@@ -136,6 +137,29 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let alert = UIAlertController(title: "DELETE", message: "Do you really want to delete?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+            let object = self.birthdays.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+            self.interactor.deleteData(of: object)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let birthday = birthdays.remove(at: sourceIndexPath.row)
+        birthdays.insert(birthday, at: destinationIndexPath.row)
+    }
 }
 
 
@@ -143,9 +167,14 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
 //MARK: - Extention Extention for MainListView with protocol MainListViewInputProtocol
 
 extension MainListView: MainListViewInputProtocol {
-    
+
     func updateData(with data: [Birthday]) {
         birthdays = data
+        tableView.reloadData()
+    }
+    
+    
+    func updateData() {
         tableView.reloadData()
     }
 }
