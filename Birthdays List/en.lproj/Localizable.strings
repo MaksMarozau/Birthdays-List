@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Birthdays List
+
+  Created by Maks on 4.02.24.
+  
+*/
+
+//MARK: - MainListView Screen
+
+"List Title" = "Birthdays List";
+"Delete" = "DELETE";
+"Delete message" = "Do you really want to delete?";
+"Yes" = "Yes";
+"No" = "No";
+
+
+//MARK: - AddNewView Screen
+
+"New title" = "New Info";
+"Save" = "Save";
+"Enter info" = "Enter some information below:";
+"Name" = "Name";
+"Surname" = "Surname";
+"Saved" = "Saved";
+"Empty" = "Field is empty";
+"Empty message" = "Every field must be fill in";
+"OK" = "OK";
+"Save failed" = "Save was failed";
+"Cancel" = "Cancel";
+
+
+//MARK: - NotificationWorker
+
+"Greeting" = "Whaaat's UP!!!";
+"Greeting body" = "Don't forget to congratulat your friend!";

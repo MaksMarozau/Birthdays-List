@@ -57,8 +57,7 @@ final class MainListView: UIViewController {
     private func configureNavigationBar() {
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Birthdays List"
-        
+        title = locText(by: "List Title")
         navigationController?.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { _ in
             self.router.moveToAddingInfo()
         }))
@@ -103,6 +102,15 @@ final class MainListView: UIViewController {
     private func viewWillStart() {
         interactor.loadData()
     }
+    
+    
+    
+//MARK: - Localization for text by title
+    
+    private func locText(by key: String) -> String {
+        let text = NSLocalizedString(key, comment: "")
+        return text
+    }
 }
 
 
@@ -141,13 +149,14 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        let alert = UIAlertController(title: "DELETE", message: "Do you really want to delete?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+        let alert = UIAlertController(title: locText(by: "Delete"), message: locText(by: "Delete message"), preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: locText(by: "Yes"), style: .destructive, handler: { _ in
             let object = self.birthdays.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
             self.interactor.deleteData(of: object)
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel))
+        alert.addAction(UIAlertAction(title: locText(by: "No"), style: .cancel))
         present(alert, animated: true)
     }
     
