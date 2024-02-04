@@ -64,7 +64,7 @@ final class MainListView: UIViewController {
         navigationController?.topViewController?.navigationItem.rightBarButtonItem?.tintColor = UIColor.visualEffect
         
         navigationController?.topViewController?.navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .trash, primaryAction: UIAction(handler: { _ in
-            
+            self.tableView.isEditing.toggle()
         }))
         navigationController?.topViewController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.red
     }
@@ -135,6 +135,22 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        birthdays.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let birthday = birthdays.remove(at: sourceIndexPath.row)
+        birthdays.insert(birthday, at: destinationIndexPath.row)
     }
 }
 
