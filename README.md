@@ -5,12 +5,19 @@ The learning application "Birthdays List"
 ******************************************************
 
 The application was developed with clean architecture VIP + Router and includes 2 screens with custom design .
+
 In general, the first screen is UITableView with a lot of the methods of the DataSource and Delegate.
+
 Second screen includes several UITextViews, UIDataPicker and UIButton.
+
 The application was made with the custom NavigationBar.
+
 Saving, loading  and deleting data implemented with CoreData.
+
 Added UIAllertControllers for notifications inside the application.
+
 Added Local Notification to notify user of events.
+
 Localized for English and Russian languages.
 
 ******************************************************
