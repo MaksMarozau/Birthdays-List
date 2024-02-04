@@ -54,17 +54,33 @@ final class CoreDataManager: NSCopying {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let feetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Birthday")
-        
-        var birthdays: [Birthday] = []
-        
+        let feetchRequest = NSFetchRequest<Birthday>(entityName: "Birthday")
+                
         do {
-            let objects = try managedContext.fetch(feetchRequest)
-            guard let feetchedObjects = objects as? [Birthday] else {return .failure(.error("Could not cast to [Birthday]"))}
-            birthdays = feetchedObjects
+            let birthdays = try managedContext.fetch(feetchRequest)
+            return .success(birthdays)
         } catch {
             return .failure(.error("Could not load"))
         }
-        return .success(birthdays)
+    }
+    
+    
+    
+//MARK: - Delete data method
+    
+    func deleteData(of object: Birthday) -> Result<Void, CoreDataErrors> {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return .failure(.error("AppDelegate not found")) }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        managedContext.delete(object)
+        
+        do {
+            try managedContext.save()
+        } catch {
+            return .failure(.error("Could not save"))
+        }
+        return .success(())
     }
 }

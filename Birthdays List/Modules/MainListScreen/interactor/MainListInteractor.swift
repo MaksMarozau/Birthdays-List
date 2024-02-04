@@ -3,6 +3,7 @@
 protocol MainListInteractorInputProtocol {
 
     func loadData()
+    func deleteData(of object: Birthday)
 }
 
 
@@ -35,6 +36,19 @@ extension MainListInteractor: MainListInteractorInputProtocol {
         switch result {
         case .success(let birthdays):
             presenter.getData(with: birthdays)
+        case .failure(let failure):
+            print(failure)
+        }
+    }
+    
+    
+    func deleteData(of object: Birthday) {
+        
+        let result = CoreDataManager.instance.deleteData(of: object)
+        
+        switch result {
+        case .success(let success):
+            presenter.objectWasDeleted()
         case .failure(let failure):
             print(failure)
         }

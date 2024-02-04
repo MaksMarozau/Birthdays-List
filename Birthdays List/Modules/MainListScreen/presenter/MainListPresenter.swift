@@ -3,6 +3,7 @@
 protocol MainListPresenterInputProtocol {
     
     func getData(with data: [Birthday])
+    func objectWasDeleted()
 }
 
 
@@ -27,9 +28,14 @@ final class MainListPresenter {
 //MARK: - Implemendation of MainListPresenterInputProtocol protocol for MainListPresenter class
 
 extension MainListPresenter: MainListPresenterInputProtocol {
-    
+   
     func getData(with data: [Birthday]) {
         
         view.updateData(with: data)
+    }
+    
+    
+    func objectWasDeleted() {
+        view.updateData()
     }
 }

@@ -5,6 +5,7 @@ import UIKit
 protocol MainListViewInputProtocol: AnyObject {
     
     func updateData(with data: [Birthday])
+    func updateData()
 }
 
 
@@ -139,8 +140,15 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        birthdays.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .left)
+        
+        let alert = UIAlertController(title: "DELETE", message: "Do you really want to delete?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+            let object = self.birthdays.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left)
+            self.interactor.deleteData(of: object)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel))
+        present(alert, animated: true)
     }
     
     
@@ -159,9 +167,14 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
 //MARK: - Extention Extention for MainListView with protocol MainListViewInputProtocol
 
 extension MainListView: MainListViewInputProtocol {
-    
+
     func updateData(with data: [Birthday]) {
         birthdays = data
+        tableView.reloadData()
+    }
+    
+    
+    func updateData() {
         tableView.reloadData()
     }
 }
