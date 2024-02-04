@@ -1,16 +1,26 @@
 import Foundation
 import UserNotifications
 
+//MARK: - Protocol for extention NotificationWorker to create and add notifications to the notification center
+
 protocol NotificationWorkerInputProtocol {
     
     func addNotification(by date: Date)
 }
 
 
+
+//MARK: - Final class MainListView
+
 final class NotificationWorker {
     
+    
+//MARK: - Properties of class
+
     private let notificationCenter = UNUserNotificationCenter.current()
     
+    
+//MARK: - Methods of class
     
     func createContent() -> UNMutableNotificationContent {
         
@@ -21,20 +31,21 @@ final class NotificationWorker {
         
         return content
     }
-        
     
     func createTrigger(by date: Date) -> UNCalendarNotificationTrigger {
         
         let date = date
         var dateComponents = Calendar.current.dateComponents([.month, .day], from: date)
-        dateComponents.hour = 17
-        dateComponents.minute = 59
+        dateComponents.hour = 9
+        dateComponents.minute = 45
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         return trigger
     }
 }
 
+
+//MARK: - Implemendation of NotificationWorkerInputProtocol protocol for NotificationWorker class
 
 extension NotificationWorker: NotificationWorkerInputProtocol {
     
